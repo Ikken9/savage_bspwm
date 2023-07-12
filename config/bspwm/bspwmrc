@@ -19,7 +19,6 @@ bspc config focus_follows_pointer true
 
 feh --bg-fill $HOME/Pictures/Wallpapers/wallpaper.png
 
-picom --config ~/.config/picom/picom.conf &
 picom --experimental-backends &
 
 xsetroot -cursor_name left_ptr &
