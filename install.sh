@@ -26,6 +26,7 @@ sudo chmod u+x ~/.config/bspwm/bspwmrc
 
 # Install Hack Nerd Fonts
 sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
+sudo fc-cache -fv
 
 # Install and configure polybar
 sudo apt install polybar
@@ -38,7 +39,7 @@ sudo cp -rv $EDGERUNNER/config/kitty ~/.config
 
 # Install and configure Rofi
 sudo apt install -y rofi
-mkdir -p ~/.local/share/rofi/themes/
+mkdir ~/.local/share/rofi/themes/
 sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 
 # Install other stuff
@@ -61,7 +62,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
 
 cp -rfv $EDGERUNNER/.p10k.zsh ~/.p10k.zsh
-sudo cp -rv $EDGERUNNER/.p10k.zsh-root /root/.p10k.zsh
+sudo cp -rfv $EDGERUNNER/.p10k.zsh-root /root/.p10k.zsh
 
 # Configure ZSH
 sudo cp -rfv $EDGERUNNER/.zshrc ~
@@ -90,4 +91,5 @@ cd ~
 rofi-theme-selector
 
 sudo rm -rf ~/temp
-reboot
+
+echo "Process finished, perform a manual reboot to apply all changes"
