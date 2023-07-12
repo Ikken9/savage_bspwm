@@ -3,7 +3,7 @@ super + Return
     kitty
  
 # program launcher
-super + d
+super + space
     rofi -show run
  
 # make sxhkd reload its configuration files:
