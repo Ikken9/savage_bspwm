@@ -44,9 +44,6 @@ sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 # Install other stuff
 sudo apt install -y fzf feh ranger bat lsd neofetch
 
-# Install rust support
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # Install libssl-dev
 sudo apt install libssl-dev
 
