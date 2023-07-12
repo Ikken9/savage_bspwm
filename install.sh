@@ -25,7 +25,7 @@ sudo cp -rv $EDGERUNNER/config/sxhkd ~/.config
 sudo chmod u+x ~/.config/bspwm/bspwmrc
 
 # Install Hack Nerd Fonts
-cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
+sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
 
 # Install and configure polybar
 sudo apt install polybar
@@ -50,14 +50,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install libssl-dev
 sudo apt install libssl-dev
 
-# Install mdcat
-git clone https://github.com/swsnr/mdcat.git
-cd mdcat
-cargo install mdcat
-
 # Set wallpaper
 mkdir ~/Pictures/Wallpapers
-cp -v $EDGERUNNER/wallpapers/wallpaper.png ~/Picture/Wallpapers
+cp -v $EDGERUNNER/wallpapers/wallpaper.png ~/Pictures/Wallpapers
 
 # Install ZSH and migrate to it
 sudo apt install zsh
