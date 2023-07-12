@@ -86,6 +86,7 @@ ninja -C build install
 cp $EDGERUNNER/config/picom ~/.config
 
 cd ~
+
 rofi-theme-selector
 
 sudo rm -rf ~/temp
