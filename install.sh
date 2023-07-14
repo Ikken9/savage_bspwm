@@ -28,6 +28,8 @@ sudo cp -rfv $EDGERUNNER/config/sxhkd/sxhkdrc ~/.config/sxhkd
 
 sudo chmod 777 ~/.config/bspwm/bspwmrc
 
+sudo mv /usr/local/share/xsessions/bspwm.desktop /usr/share/xsessions
+
 # Install Hack Nerd Fonts
 sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
 sudo fc-cache -fv
@@ -48,6 +50,9 @@ sudo cp -rfv $EDGERUNNER/config/rofi/themes/* ~/.local/share/rofi/themes
 
 # Install other stuff
 sudo apt install -y fzf feh ranger bat lsd neofetch direnv
+
+# Configure lsd
+sudo cp -fv $EDGERUNNER/config/lsd/config.yaml ~/.config/lsd/
 
 # Install libssl-dev
 sudo apt install -y libssl-dev
