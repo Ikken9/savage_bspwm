@@ -23,8 +23,8 @@ git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
 
-sudo cp -rv $EDGERUNNER/config/bspwm ~/.config
-sudo cp -rv $EDGERUNNER/config/sxhkd ~/.config
+sudo cp -rfv $EDGERUNNER/config/bspwm ~/.config
+sudo cp -rfv $EDGERUNNER/config/sxhkd ~/.config
 
 sudo chmod u+x ~/.config/bspwm/bspwmrc
 
@@ -43,8 +43,8 @@ sudo cp -rv $EDGERUNNER/config/kitty ~/.config
 
 # Install and configure Rofi
 sudo apt install -y rofi
-mkdir ~/.local/share/rofi/themes/
-sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
+mkdir ~/.local/share/rofi/themes
+sudo cp -rfv $EDGERUNNER/config/rofi/themes/* ~/.local/share/rofi/themes
 
 # Install other stuff
 sudo apt install -y fzf feh ranger bat lsd neofetch direnv
