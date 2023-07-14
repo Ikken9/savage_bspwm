@@ -119,4 +119,4 @@ super + ctrl + {Left,Down,Up,Right}
  
 # Custom move/resize
 alt + super + {Left,Down,Up,Right}
-    /home/ikken/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
+    $HOME/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
