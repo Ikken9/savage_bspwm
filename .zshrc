@@ -57,8 +57,12 @@ PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/
 alias ls='lsd'
 alias ll='lsd -lh'
 alias la='lsd -a'
+alias lt='lsd --tree'
 alias lla='lsd -lha'
 alias cat='bat'
+
+# Custom LSD colors
+export LS_COLORS=~/.config/lsd/config.yaml
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -68,7 +72,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # Functions
-function mkt(){
+function mkt() {
 	mkdir {nmap,content,exploits,scripts}
 }
 
@@ -86,7 +90,7 @@ function man() {
 }
 
 # fzf improvement
-function fzf-lovely(){
+function fzf-lovely() {
 
 	if [ "$1" = "h" ]; then
 		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
@@ -111,6 +115,10 @@ function fzf-lovely(){
 function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
+}
+
+function pcolors() {
+	for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 }
 
 # Custom binds
