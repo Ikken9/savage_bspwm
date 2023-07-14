@@ -1,2 +1,2 @@
 # edgerunner
-A nice looking bspwm + sxhkd rice
+A nice looking bspwm + sxhkd rice for Kali Linux
