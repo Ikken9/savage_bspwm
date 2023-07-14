@@ -23,10 +23,10 @@ git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
 
-sudo cp -rfv $EDGERUNNER/config/bspwm ~/.config
-sudo cp -rfv $EDGERUNNER/config/sxhkd ~/.config
+sudo cp -rfv $EDGERUNNER/config/bspwm/bspwmrc ~/.config/bspwm
+sudo cp -rfv $EDGERUNNER/config/sxhkd/sxhkdrc ~/.config/sxhkd
 
-sudo chmod u+x ~/.config/bspwm/bspwmrc
+sudo chmod 777 ~/.config/bspwm/bspwmrc
 
 # Install Hack Nerd Fonts
 sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
