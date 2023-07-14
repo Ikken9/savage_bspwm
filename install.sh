@@ -15,7 +15,7 @@ mkdir ~/temp
 cd ~/temp
 
 # Install bspwm + sxhkd dependencies
-sudo apt-get install libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
+sudo apt-get install -y libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev
 
 # Install and configure bspwm + sxhkd
 git clone https://github.com/baskerville/bspwm.git
@@ -33,7 +33,7 @@ sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
 sudo fc-cache -fv
 
 # Install and configure polybar
-sudo apt install polybar
+sudo apt install -y polybar
 sudo cp -rvf $EDGERUNNER/config/polybar ~/.config
 sudo chmod +x ~/.config/polybar/launch.sh
 
@@ -50,7 +50,7 @@ sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 sudo apt install -y fzf feh ranger bat lsd neofetch direnv
 
 # Install libssl-dev
-sudo apt install libssl-dev
+sudo apt install -y libssl-dev
 
 # Set wallpaper
 mkdir ~/Pictures/Wallpapers
@@ -81,7 +81,7 @@ cd /usr/share/zsh-sudo
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 
 # Install picom dependencies
-sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev meson
+sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev meson
 
 # Install and configure picom
 sudo apt install picom
