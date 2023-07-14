@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Author: Ikken9
+# https://github.com/Ikken9
+
+
 if [ "$(whoami)" == "root" ]; then
     echo 'Error: Cannot run from root, you need to switch to your user.'
     exit 1
@@ -43,7 +47,7 @@ mkdir ~/.local/share/rofi/themes/
 sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 
 # Install other stuff
-sudo apt install -y fzf feh ranger bat lsd neofetch
+sudo apt install -y fzf feh ranger bat lsd neofetch direnv
 
 # Install libssl-dev
 sudo apt install libssl-dev
