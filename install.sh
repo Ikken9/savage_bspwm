@@ -46,13 +46,13 @@ sudo cp -rv $EDGERUNNER/config/kitty ~/.config
 # Install and configure Rofi
 sudo apt install -y rofi
 mkdir ~/.local/share/rofi/themes
-sudo cp -rfv $EDGERUNNER/config/rofi/themes/* ~/.local/share/rofi/themes
+sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 
 # Install other stuff
 sudo apt install -y fzf feh ranger bat lsd neofetch direnv
 
 # Configure lsd
-sudo cp -fv $EDGERUNNER/config/lsd/config.yaml ~/.config/lsd/
+sudo cp -rfv $EDGERUNNER/config/lsd ~/.config
 
 # Install libssl-dev
 sudo apt install -y libssl-dev
