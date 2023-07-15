@@ -59,7 +59,7 @@ alias ll='lsd -lh'
 alias la='lsd -a'
 alias lt='lsd --tree'
 alias lla='lsd -lha'
-alias cat='bat'
+alias cat='batcat'
 
 # Custom LSD colors
 export LS_COLORS=~/.config/lsd/config.yaml
