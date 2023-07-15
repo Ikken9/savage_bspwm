@@ -23,8 +23,8 @@ git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
 
-sudo cp -rfv $EDGERUNNER/config/bspwm/bspwmrc ~/.config/bspwm
-sudo cp -rfv $EDGERUNNER/config/sxhkd/sxhkdrc ~/.config/sxhkd
+sudo cp -rfv $EDGERUNNER/config/bspwm ~/.config
+sudo cp -rfv $EDGERUNNER/config/sxhkd ~/.config
 
 sudo chmod 777 ~/.config/bspwm/bspwmrc
 
