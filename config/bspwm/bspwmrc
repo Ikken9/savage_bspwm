@@ -17,7 +17,7 @@ bspc config right_padding       4
 bspc config borderless_monocle   true
 bspc config focus_follows_pointer true
 
-feh --bg-fill $HOME/Pictures/Wallpapers/wallpaper.png
+feh --bg-fill $HOME/Pictures/Wallpapers/garouwallpaper.png
 
 #picom &
 
