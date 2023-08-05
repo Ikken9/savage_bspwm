@@ -9,7 +9,7 @@ if [ "$(whoami)" == "root" ]; then
     exit 1
 fi
 
-EDGERUNNER=$(pwd)
+DIR_PATH=$(pwd)
 
 mkdir ~/temp
 cd ~/temp
@@ -23,30 +23,30 @@ git clone https://github.com/baskerville/sxhkd.git
 cd bspwm && make && sudo make install
 cd ../sxhkd && make && sudo make install
 
-sudo cp -rfv $EDGERUNNER/config/bspwm ~/.config
-sudo cp -rfv $EDGERUNNER/config/sxhkd ~/.config
+sudo cp -rfv $DIR_PATH/config/bspwm ~/.config
+sudo cp -rfv $DIR_PATH/config/sxhkd ~/.config
 
 sudo chmod 777 ~/.config/bspwm/bspwmrc
 
 sudo mv /usr/local/share/xsessions/bspwm.desktop /usr/share/xsessions
 
 # Install Hack Nerd Fonts
-sudo cp $EDGERUNNER/fonts/*.ttf /usr/share/fonts
+sudo cp $DIR_PATH/fonts/*.ttf /usr/share/fonts
 sudo fc-cache -fv
 
 # Install and configure polybar
 sudo apt install -y polybar
-sudo cp -rvf $EDGERUNNER/config/polybar ~/.config
+sudo cp -rvf $DIR_PATH/config/polybar ~/.config
 sudo chmod +x ~/.config/polybar/launch.sh
 
 # Install and configure kitty terminal emulator
 sudo apt install -y kitty
-sudo cp -rv $EDGERUNNER/config/kitty ~/.config
+sudo cp -rv $DIR_PATH/config/kitty ~/.config
 
 # Install and configure Rofi
 sudo apt install -y rofi
 mkdir ~/.local/share/rofi/themes
-sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
+sudo cp -rfv $DIR_PATH/config/rofi/themes ~/.local/share/rofi
 
 # Install Neovim (nvchad)
 sudo apt install -y ripgrep
@@ -59,14 +59,14 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 sudo apt install -y fzf feh ranger bat lsd neofetch direnv moreutils
 
 # Configure lsd
-sudo cp -rfv $EDGERUNNER/config/lsd ~/.config
+sudo cp -rfv $DIR_PATH/config/lsd ~/.config
 
 # Install libssl-dev
 sudo apt install -y libssl-dev
 
 # Set wallpaper
 mkdir ~/Pictures/Wallpapers
-cp -v $EDGERUNNER/wallpapers/wallpaper.png ~/Pictures/Wallpapers
+cp -rfv $DIR_PATH/wallpapers ~/Pictures/Wallpapers
 
 # Install ZSH and migrate to it
 sudo apt install zsh
@@ -77,11 +77,11 @@ sudo chsh -s $(which zsh)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /root/.powerlevel10k
 
-cp -rfv $EDGERUNNER/.p10k.zsh ~/.p10k.zsh
-sudo cp -rfv $EDGERUNNER/.p10k-root.zsh /root/.p10k.zsh
+cp -rfv $DIR_PATH/.p10k.zsh ~/.p10k.zsh
+sudo cp -rfv $DIR_PATH/.p10k-root.zsh /root/.p10k.zsh
 
 # Configure ZSH
-sudo cp -rfv $EDGERUNNER/.zshrc ~
+sudo cp -rfv $DIR_PATH/.zshrc ~
 
 # Create symlink between default user zshrc and root zshrc
 sudo ln -s -fv ~/.zshrc /root/.zshrc
@@ -97,7 +97,7 @@ sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev 
 
 # Install and configure picom
 sudo apt install picom
-cp -rfv $EDGERUNNER/config/picom ~/.config
+cp -rfv $DIR_PATH/config/picom ~/.config
 
 cd ~
 
