@@ -51,7 +51,7 @@ source $(pwd)/powerlevel10k/powerlevel10k.zsh-theme
 
 # Manual configuration
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Aliases
 alias ls='lsd'
@@ -60,6 +60,7 @@ alias la='lsd -a'
 alias lt='lsd --tree'
 alias lla='lsd -lha'
 alias cat='batcat'
+alias nvim='~/squashfs-root/usr/bin/nvim'
 
 # Custom LSD colors
 export LS_COLORS=~/.config/lsd/config.yaml
