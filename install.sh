@@ -66,7 +66,7 @@ sudo apt install -y libssl-dev
 
 # Set wallpaper
 mkdir ~/Pictures/Wallpapers
-cp -rfv $DIR_PATH/wallpapers ~/Pictures/Wallpapers
+cp -fv $DIR_PATH/wallpapers/* ~/Pictures/Wallpapers
 
 # Install ZSH and migrate to it
 sudo apt install zsh
