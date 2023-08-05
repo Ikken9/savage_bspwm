@@ -5,7 +5,7 @@
 
 
 if [ "$(whoami)" == "root" ]; then
-    echo 'Error: Cannot run from root, you need to switch to your user.'
+    echo 'Error: Cannot run as root, you need to switch to your user'
     exit 1
 fi
 
@@ -48,8 +48,15 @@ sudo apt install -y rofi
 mkdir ~/.local/share/rofi/themes
 sudo cp -rfv $EDGERUNNER/config/rofi/themes ~/.local/share/rofi
 
+# Install Neovim (nvchad)
+sudo apt install -y ripgrep
+cd ~
+curl -LOJ https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
+chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+
 # Install other stuff
-sudo apt install -y fzf feh ranger bat lsd neofetch direnv
+sudo apt install -y fzf feh ranger bat lsd neofetch direnv moreutils
 
 # Configure lsd
 sudo cp -rfv $EDGERUNNER/config/lsd ~/.config
