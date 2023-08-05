@@ -353,11 +353,11 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control background colors.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=5
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=9
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=6
-  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=8
-  typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=4
+  typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=84
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=177
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=25
+  typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=124
+  typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=220
 
   # Branch icon. Set this parameter to '\UE0A0 ' for the popular Powerline branch icon.
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
@@ -511,42 +511,42 @@
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=2
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=34
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=2
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=2
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=214
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=2
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=3
-  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=160
+  typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=2
 
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
   # Use terse signal names: "INT" instead of "SIGINT(2)".
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=3
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=160
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_BACKGROUND=2
 
   # Status when some part of a pipe command fails and the overall exit status is also non-zero.
   # It may look like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION='✘'
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=3
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=1
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=160
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_BACKGROUND=2
 
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=3
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=16
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=2
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.
@@ -560,8 +560,8 @@
 
   #######################[ background_jobs: presence of background jobs ]#######################
   # Background jobs color.
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=6
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=0
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=238
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=2
   # Don't show the number of background jobs.
   typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
   # Custom icon.
@@ -578,8 +578,8 @@
   # Default asdf color. Only used to display tools for which there is no color override (see below).
   # Tip:  Override these parameters for ${TOOL} with POWERLEVEL9K_ASDF_${TOOL}_FOREGROUND and
   # POWERLEVEL9K_ASDF_${TOOL}_BACKGROUND.
-  typeset -g POWERLEVEL9K_ASDF_FOREGROUND=16
-  typeset -g POWERLEVEL9K_ASDF_BACKGROUND=9
+  typeset -g POWERLEVEL9K_ASDF_FOREGROUND=233
+  typeset -g POWERLEVEL9K_ASDF_BACKGROUND=255
 
   # There are four parameters that can be used to hide asdf tools. Each parameter describes
   # conditions under which a tool gets hidden. Parameters can hide tools but not unhide them. If at
@@ -644,13 +644,13 @@
 
   # Python version from asdf.
   typeset -g POWERLEVEL9K_ASDF_PYTHON_FOREGROUND=226
-  typeset -g POWERLEVEL9K_ASDF_PYTHON_BACKGROUND=14
+  typeset -g POWERLEVEL9K_ASDF_PYTHON_BACKGROUND=27
   # typeset -g POWERLEVEL9K_ASDF_PYTHON_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # typeset -g POWERLEVEL9K_ASDF_PYTHON_SHOW_ON_UPGLOB='*.foo|*.bar'
 
   # Go version from asdf.
   typeset -g POWERLEVEL9K_ASDF_GOLANG_FOREGROUND=255
-  typeset -g POWERLEVEL9K_ASDF_GOLANG_BACKGROUND=4
+  typeset -g POWERLEVEL9K_ASDF_GOLANG_BACKGROUND=38
   # typeset -g POWERLEVEL9K_ASDF_GOLANG_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # typeset -g POWERLEVEL9K_ASDF_GOLANG_SHOW_ON_UPGLOB='*.foo|*.bar'
 
@@ -662,7 +662,7 @@
 
   # Rust version from asdf.
   typeset -g POWERLEVEL9K_ASDF_RUST_FOREGROUND=255
-  typeset -g POWERLEVEL9K_ASDF_RUST_BACKGROUND=1
+  typeset -g POWERLEVEL9K_ASDF_RUST_BACKGROUND=94
   # typeset -g POWERLEVEL9K_ASDF_RUST_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # typeset -g POWERLEVEL9K_ASDF_RUST_SHOW_ON_UPGLOB='*.foo|*.bar'
 
@@ -698,7 +698,7 @@
 
   # Erlang version from asdf.
   typeset -g POWERLEVEL9K_ASDF_ERLANG_FOREGROUND=255
-  typeset -g POWERLEVEL9K_ASDF_ERLANG_BACKGROUND=8
+  typeset -g POWERLEVEL9K_ASDF_ERLANG_BACKGROUND=160
   # typeset -g POWERLEVEL9K_ASDF_ERLANG_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # typeset -g POWERLEVEL9K_ASDF_ERLANG_SHOW_ON_UPGLOB='*.foo|*.bar'
 
@@ -721,8 +721,8 @@
   # typeset -g POWERLEVEL9K_ASDF_PHP_SHOW_ON_UPGLOB='*.foo|*.bar'
 
   # Haskell version from asdf.
-  typeset -g POWERLEVEL9K_ASDF_HASKELL_FOREGROUND=16
-  typeset -g POWERLEVEL9K_ASDF_HASKELL_BACKGROUND=3
+  typeset -g POWERLEVEL9K_ASDF_HASKELL_FOREGROUND=233
+  typeset -g POWERLEVEL9K_ASDF_HASKELL_BACKGROUND=255
   # typeset -g POWERLEVEL9K_ASDF_HASKELL_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # typeset -g POWERLEVEL9K_ASDF_HASKELL_SHOW_ON_UPGLOB='*.foo|*.bar'
 
@@ -940,22 +940,22 @@
 
   ##################################[ context: user@hostname ]##################################
   # Context color when running with privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=16
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND=15
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=14
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND=242
   # Context color in SSH without privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=16
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND=15
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=14
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND=242
   # Default context color (no privileges, no SSH).
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=16
-  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND=15
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=255
+  typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND=14
 
   # Context format when running with privileges: user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='󱐋 %n@%m'
   # Context format when in SSH without privileges: user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   # Default context format (no privileges, no SSH): user@hostname.
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
-
+  
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
   #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
